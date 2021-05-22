@@ -20,6 +20,7 @@
     "test:debug": "cross-env NODE_PATH=./src NODE_ENV=test node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "cross-env NODE_PATH=./src NODE_ENV=test jest --maxWorkers=1 --config ./test/jest-e2e.json",
     "migration:make": "yarn knex migrate:make -x ts",
+    "migration:latest": "yarn knex migrate:latest",
     "postmigration:make": "yarn eslint \"./src/modules/database/migrations/**/*.ts\" --fix",
     "seed:make": "yarn knex seed:make -x ts",
     "postseed:make": "yarn eslint \"./src/modules/database/migrations/**/*.ts\" --fix",
