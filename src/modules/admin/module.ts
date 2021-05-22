@@ -7,6 +7,7 @@ import { OrderController } from './controllers/order';
 import { TestController } from './controllers/test';
 import { UserController } from './controllers/user';
 import { RenewTokenMiddleware } from './middlewares/renewToken';
+import { OrderRepository } from './repositories/order';
 import { UserRepository } from './repositories/user';
 import { AuthService } from './services/auth';
 import { OrderService } from './services/order';
@@ -15,7 +16,7 @@ import { UserService } from './services/user';
 @Module({
   imports: [HttpModule, CommonModule, DatabaseModule],
   controllers: [AuthController, UserController, TestController, OrderController],
-  providers: [AuthService, UserRepository, UserService, OrderService]
+  providers: [AuthService, UserRepository, UserService, OrderService, OrderRepository]
 })
 export class AdminModule implements NestModule {
   public configure(consumer: MiddlewareConsumer) {
