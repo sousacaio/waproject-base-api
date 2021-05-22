@@ -11,7 +11,7 @@ export class Order extends Model implements IOrder {
   @ApiProperty({ type: 'integer' })
   public userId: number;
   @ApiProperty({ type: 'integer' })
-  public quantity: string;
+  public quantity: number;
   @ApiProperty({ type: 'integer' })
   public description: string;
   @ApiProperty({ type: 'string', format: 'date-time' })
