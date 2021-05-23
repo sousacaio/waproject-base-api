@@ -12,9 +12,10 @@ export async function up(knex: Knex): Promise<any> {
       .onDelete('CASCADE');
     table.string('name', 50).notNullable();
     table.integer('quantity').nullable();
+    table.integer('value').notNullable();
     table.text('description').notNullable();
-    table.dateTime('createdDate').notNullable();
-    table.dateTime('updatedDate').notNullable();
+    table.dateTime('createdDate').defaultTo(knex.fn.now());
+    table.dateTime('updatedDate').defaultTo(knex.fn.now());
   });
 }
 
