@@ -22,6 +22,7 @@ describe('Admin/Order', () => {
         description: 'valid_description',
         quantity: 15,
         name: 'valid_name',
+        value: 80,
         userId: 0
       });
       fail();
