@@ -5,7 +5,7 @@ import { PaginationValidator } from 'modules/common/validators/pagination';
 export class ListValidator extends PaginationValidator {
   @IsString()
   @IsOptional()
-  @IsIn(['name', 'description', 'quantity', 'createdDate', 'updatedDate'])
-  @ApiProperty({ required: false, enum: ['name', 'description', 'quantity', 'createdDate', 'updatedDate'] })
+  @IsIn(['name', 'description', 'value', 'quantity', 'createdDate', 'updatedDate'])
+  @ApiProperty({ required: false, enum: ['name', 'description', 'value', 'quantity', 'createdDate', 'updatedDate'] })
   public orderBy: string;
 }
