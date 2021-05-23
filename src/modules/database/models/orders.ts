@@ -13,6 +13,8 @@ export class Order extends Model implements IOrder {
   @ApiProperty({ type: 'integer' })
   public quantity: number;
   @ApiProperty({ type: 'integer' })
+  public value: number;
+  @ApiProperty({ type: 'integer' })
   public description: string;
   @ApiProperty({ type: 'string', format: 'date-time' })
   public createdDate: Date;

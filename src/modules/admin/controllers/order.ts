@@ -14,7 +14,7 @@ export class OrderController {
   constructor(private readonly orderService: OrderService, private readonly orderRepository: OrderRepository) {}
 
   @Post('')
-  public async login(@Body() model: SaveValidator) {
+  public async create(@Body() model: SaveValidator) {
     return this.orderService.save(model);
   }
 

@@ -26,4 +26,7 @@ export class SaveValidator implements IOrder {
   @IsInt()
   @ApiProperty({ required: true, type: 'integer' })
   public quantity: number;
+  @IsInt()
+  @ApiProperty({ required: true, type: 'integer' })
+  public value: number;
 }
